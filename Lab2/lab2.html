@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Personal Profile Page</title>
+    </head>
+    <body>
+        <style>
+            .myDiv {
+            border: 1px outset rgb(0, 0, 0);
+            background-color: rgb(254, 251, 255);    
+            text-align: left;
+            padding-left: 50px;
+            border-style: dotted;
+            border-radius: ;
+            }
+        </style>
+
+        <!-- Semantic header -->
+        <header>
+            <h1>Hi! Welcome to My Personal Profile Page</h1>
+        </header>
+
+        <!-- Navigation bar -->
+        <nav>
+            <a href="#about">About Me</a> |
+            <a href="#form">Registration Form</a> |
+            <a href="#footer">Contact</a>
+        </nav>
+
+        <!-- Section for personal info table -->
+        <section id="about">
+            <h2>Personal Information</h2>
+
+            <!--Profile Picture-->
+            <img src="Myprofile.jpg" alt="My Profile Picture" width="100"><br><br>
+            <table border="1">
+                <tr>
+                    <th>Information</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Che Ku NurulHuda Binti Che Ku Saiful Muzahar</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Occupation</td>
+                    <td>Student</td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>Bachelor of Computer Science (Software Engineering) with Honours</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>011-36541626</td>
+                </tr>
+                <tr>
+                    <td>Matric Number</td>
+                    <td>S75871</td>
+                </tr>
+            </table>
+        </section>
+
+        <br><div class="myDiv">
+        <!-- Section for form -->
+        <section id="form">
+            <article>
+                <h2>Registration Form</h2>
+
+                <form action="submit_form.php" method="post">
+                    <!-- Text input fields -->
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="fullname" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <!-- Radio buttons for gender -->
+                    <label><strong>Gender:</strong></label><br>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label><br><br>
+
+                    <!-- Checkboxes for hobbies -->
+                    <label><strong>Select your hobbies:</strong></label><br>
+                    <input type="checkbox" id="hobby1" name="hobby" value="Reading">
+                    <label for="hobby1">Reading</label><br>
+                    <input type="checkbox" id="hobby2" name="hobby" value="Listening to Music">
+                    <label for="hobby2">Listening to Music</label><br>
+                    <input type="checkbox" id="hobby3" name="hobby" value="Watching Movies">
+                    <label for="hobby3">Watching Movies</label><br>
+                    <label for="hobby4">Others:</label>
+                    <input type="hobby4" id="hobby4" name="hobby4"><br><br>
+
+                    <!-- Submit button -->
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+        </section>
+        <br>
+        </div>
+
+        <!-- Footer section -->
+        <footer id="footer">
+            <p>Copyright &copy; 2025 Che Ku NurulHuda. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>
