@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Form with Calculator</title>
+
+        <!--inline styling-->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f3e8ff;
+                margin: 0;
+                padding: 0;
+                color: #210039;
+            }
+
+            #header, #footer{
+                background-color: #34003c;
+                color: white;
+                text-align: center;
+                padding: 15px;
+            }
+        
+            #content {
+                max-width: 600px;
+                margin: 30px auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 0 8px rgba(108, 21, 86, 0.371);
+            }
+
+            label {
+                display: inline-block;
+                width: 160px;
+                margin-bottom: 8px;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+
+        <!-- 2. Define the Structure -->
+        <!--2.1 A header section for the website title-->
+        <div id="header">
+            <!--3.1 Header setion: header that displays the title of the webpage using a block element like <h1>-->
+            <h1>Interactive Contact Form</h1>
+            <!--3.2 Header setion: Inline element to add a slogan or subtitle-->
+            <span>A Simple Way to Communicate and Calculate.</span>
+        </div>
+
+        <!--2.2 A content section containing the contact form and calculator-->
+        <div id="content">
+
+            <!--4.1 Content section: HTML5 elements inside a second <div>-->
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.com"><br>
+
+                    <label for="contact-date">Preferred Contact Date:</label>
+                    <input type="date" id="contact-date" name="contact-date" required><br>
+
+                    <label for="satisfaction">Rate Our Tool:</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" step="1" value="5"><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <!--4.1 Content section: inline calculator for third <div>-->
+            <br>
+                <hr>
+                <div class="calculator">
+                    <h2>Math Practice Calculator</h2>
+                    <p>Enter two numbers to calculate their <strong>sum, difference, product, and average</strong>:</p>
+
+                    <form oninput="
+                        sum.value = parseInt(num1.value) + parseInt(num2.value);
+                        diff.value = parseFloat(num1.value) - parseFloat(num2.value);
+                        prod.value = parseFloat(num1.value) * parseFloat(num2.value);
+                        avg.value = ((parseFloat(num1.value) + parseFloat(num2.value)) / 2).toFixed(2);
+                        ">
+
+                        <label for="num1">Number 1:</label>
+                        <input id="num1" type="number" name="num1" value="0"><br>
+
+                        <label for="num2">Number 2:</label>
+                        <input id="num2" type="number" name="num2" value="0"><br>
+
+                        <label>Sum :</label>
+                        <output name="sum" for="num1 num2">0</output><br>
+                        
+                        <label>Difference :</label>
+                        <output name="diff" for="num1 num2">0</output><br>
+
+                        <label>Product :</label>
+                        <output name="prod" for="num1 num2">0</output><br>
+
+                        <label>Average :</label>
+                        <output name="avg" for="num1 num2">0</output>
+                    </form>
+                </div>
+        </div>
+
+        <!--2.3 A footer section with contact information-->
+        <!--5 Footer Section: -->
+        <div id="footer">
+            &copy; 2025 Che Ku NurulHuda. All rights reserved.
+        </div>
+
+    </body>
+</html>
