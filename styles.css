@@ -1,0 +1,153 @@
+/* General Style */
+{
+    box-sizing: border-box; /* Apply border-box globally to simplify layout */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #faf7ff;
+    color: #2a1040;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+    color: white;
+    text-align: center;
+    padding: 40px 15px;
+    border-radius: 0 0 20px 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Navigation (Link colors are internal) */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e8ff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 3px solid #c77dff;
+}
+
+nav li {
+    margin: 5px;
+}
+
+/* Keep only layout & transition in external CSS */
+nav a {
+    display: block;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+    background-color: #c77dff; /* Optional hover background */
+}
+
+/* Section General Style */
+section {
+    background-color: white;
+    margin: 30px auto;
+    padding: 40px 25px;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Video Section */
+.media-section video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    margin-top: 15px;
+}
+
+.media-section h2 {
+    text-align: center;
+    color: #6a1b9a; /* or keep your desired color */
+    margin-bottom: 20px;
+}
+
+/* Form Section */
+.form-section {
+    background-color: #f7eaff;
+}
+
+.form-section h2 {
+    text-align: center;
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #4a148c;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #b57edc;
+}
+
+/* Radio & Checkbox Groups */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+button {
+    background-color: #7b2cbf;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a189a;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+footer a {
+    color: #ffdeeb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
