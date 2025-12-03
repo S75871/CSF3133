@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- A header that introduces the quiz.-->
+    <header>
+        <h1></h1>&#x1F3AF; Interactive Quiz Challenge</h1>
+        <p>Test your knowledge with randomized questions!</p>
+    </header>
+
+    <main>
+        <!-- A section to display the questions, answer options, and a timer. -->
+        <section id="quiz-container" class="hidden">
+            <!-- Timer display -->
+            <div id="timer-container">
+                <span>&#x23F3; Time Left: <span id="timer">30</span>s</span>
+            </div>
+
+            <!-- Question display -->
+            <div id="question-container">
+                <h2 id="question-number">Question 1 of 5</h2>
+                <p id="question-text"></p>
+            </div>
+
+            <!-- Answer options display -->
+            <div id="options-container"></div>
+
+            <!-- Section to show feedback (correct/incorrect) after each answer -->
+            <div id="feedback-container" class="hidden">
+                <p id="feedback-message"></p>
+            </div>
+
+            <!-- Button to submit answers and navigate between questions -->
+            <button id="next-btn" class="hidden">Next Question</button>
+        </section>
+
+        <!-- Start screen section -->
+        <section id="start-container">
+            <div class="start-box">
+                <h2>Ready to Start?</h2>
+                <p>&#x23F1; You'll have 30 seconds per question</p>
+                <p>&#x1F4CB; Total Questions: 5</p>
+                <button id="start-btn">Start Quiz</button>
+            </div>
+        </section>
+
+        <!-- Result screen section -->
+        <section id="result-container" class="hidden">
+            <div class="result-box">
+                <h2>Quiz Completed!</h2>
+                <p id="final-score"></p>
+                <p id="performance-message"></p>
+                <button id="restart-btn">Try Again</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer to display the user's score after finishing the quiz -->
+    <footer>
+        <p id="score-display">Score: <span id="current-score">0</span>
+             / <span id="total-questions">5</span></p>
+        <p>&copy; 2025 Quiz App | CHE KU NURULHUDA </p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
