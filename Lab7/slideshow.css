@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right, rgb(0, 255, 8), rgb(167, 167, 255));;
+    /* Centers the slideshow container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 80%;
+    height: 400px; /* Example fixed height */
+    width: 600px; /* Example fixed width */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Base style for all slides (hidden by default) */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    /* 1. Hides the slide initially */
+    opacity: 0; 
+    
+    /* 2. Defines the smooth 1-second transition */
+    transition: opacity 1s ease-in-out; 
+    
+    /* 3. Stacks all slides at the bottom layer */
+    z-index: 1; 
+}
+
+/* New class added by JavaScript to make the slide visible */
+.slide.active {
+    opacity: 1;
+    /* Brings the active slide on top of inactive slides */
+    z-index: 2; 
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The previous .fade class and @keyframes are removed for this smooth transition method. */

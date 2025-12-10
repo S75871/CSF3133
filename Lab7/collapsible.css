@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex; /* Use flex to center the wrapper */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-wrapper {
+    width: 600px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+/* Style for each group */
+.collapsible-group {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.collapsible {
+    /* Full width button */
+    width: 100%; 
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    border: none;
+    text-align: left; /* Text alignment left for professional look */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.collapsible:hover, .collapsible.active-btn {
+    background-color: #0056b3;
+}
+
+/* ENHANCEMENT: Smooth Animation Logic */
+.content {
+    background: #f8f8f8;
+    
+    /* Key for smooth animation: Use max-height instead of display */
+    max-height: 0; 
+    
+    /* Define transition for max-height and padding */
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out; 
+    
+    overflow: hidden; /* Crucial to clip the content during transition */
+    padding: 0 15px; /* Initial padding is 0 vertical, 15px horizontal */
+}
+
+/* Class added by JS to expand the content */
+.content.active {
+    /* Set a height guaranteed to be larger than the content */
+    max-height: 500px; 
+    padding: 15px; /* Restore full padding when active */
+}
+
+/* ENHANCEMENT: Content Styling */
+.content p {
+    margin: 0; /* Remove default paragraph margin */
+    line-height: 1.5;
+    color: #555;
+}
